@@ -15,6 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="52dp"
+        android:background="#EADEB8"
         android:orientation="horizontal">
 
         <TextView
@@ -22,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/imcresoojin"
             android:text="메뉴 이름" />
 
         <TextView
@@ -29,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/imcresoojin"
             android:text="가격" />
 
         <ImageButton
@@ -38,14 +41,15 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/icon1" />
+            app:srcCompat="@drawable/fridge" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="메뉴 설명 한마디" />
+        android:text="메뉴 설명 한마디"
+        android:fontFamily="@font/imcresoojin"/>
 
     <TextView
         android:id="@+id/textView4"
