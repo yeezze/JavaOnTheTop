@@ -3,6 +3,7 @@ package com.apps;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
@@ -38,4 +39,5 @@ public class MainActivity extends AppCompatActivity {
         } // 변수 images 안에 있는 요소들을 대상으로 반복문 실행
 
     }
+
 }
