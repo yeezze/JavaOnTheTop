@@ -21,17 +21,16 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/logo2" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
-            android:hint="검색창"
             android:fontFamily="@font/imcresoojin"
+            android:hint="🥄검색창" />
 
-            />
 
         <ImageButton
             android:id="@+id/scrap"
@@ -61,7 +60,8 @@
             android:background="@drawable/round_background"
             android:backgroundTint="#EADEB8"
             android:fontFamily="@font/imcresoojin"
-            android:text="든든한 한끼가 당신을 기다리고 있어요♫" />
+            android:text="👨‍🍳든든한 한끼가 당신을 기다리고 있어요👨‍🍳" />
+
 
         <View
             android:layout_width="match_parent"

@@ -23,16 +23,18 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:fontFamily="@font/imcresoojin"
-            android:text="메뉴 이름" />
+            android:text="메뉴 이름"
+            android:fontFamily="@font/imcresoojin"/>
+
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:fontFamily="@font/imcresoojin"
-            android:text="가격" />
+            android:text="가격"
+            android:fontFamily="@font/imcresoojin"/>
+
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -41,34 +43,39 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/fridge" />
+            app:srcCompat="@drawable/lock" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="메뉴 설명 한마디"
-        android:fontFamily="@font/imcresoojin"/>
+        android:background="#EADEB8"
+        android:fontFamily="@font/imcresoojin"
+        android:text="메뉴 설명 한마디" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_weight="1"
+        android:fontFamily="@font/imcresoojin"
         android:text="재료" />
 
     <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/youTubePlayerView"
+         android:id="@+id/youTubePlayerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/youtubeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#C56824"
+        android:fontFamily="@font/imcresoojin"
         android:text="재생"
-        android:textColor="#000000"
-        android:layout_gravity="center"/>
+        android:textColor="#EADEB8" />
 
 
 </LinearLayout>
