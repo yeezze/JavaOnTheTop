@@ -61,7 +61,7 @@
             android:background="@drawable/round_background"
             android:backgroundTint="#EADEB8"
             android:fontFamily="@font/imcresoojin"
-            android:text="든든한 한끼가 당신을 기다리고있어요!" />
+            android:text="든든한 한끼가 당신을 기다리고 있어요♫" />
 
         <View
             android:layout_width="match_parent"
