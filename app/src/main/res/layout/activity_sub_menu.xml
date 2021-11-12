@@ -60,7 +60,7 @@
         android:layout_height="19dp"
         android:layout_weight="1"
         android:fontFamily="@font/imcresoojin"
-        android:text="재료" />
+        android:text="재료🥕" />
 
     <com.google.android.youtube.player.YouTubePlayerView
          android:id="@+id/youTubePlayerView"
