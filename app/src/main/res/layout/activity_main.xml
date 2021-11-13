@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFBDBD"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,6 +13,7 @@
         android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#EADEB8"
         android:weightSum="3">
 
         <ImageView
@@ -26,8 +27,11 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:backgroundTint="#FAF6F6"
-            android:hint="검색창" />
+            android:backgroundTint="#FFFFFF"
+            android:hint="검색창"
+            android:fontFamily="@font/imcresoojin"
+
+            />
 
         <ImageButton
             android:id="@+id/scrap"
@@ -36,7 +40,7 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:scaleType="fitCenter"
-            android:src="@drawable/icon1" />
+            android:src="@drawable/fridge" />
     </LinearLayout>
 
     <!--Body-->
@@ -56,12 +60,14 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:background="@drawable/round_background"
-            android:text="매일 매일 새로운 음식" />
+            android:backgroundTint="#EADEB8"
+            android:fontFamily="@font/imcresoojin"
+            android:text="든든한 한끼가 당신을 기다리고 있어요♫" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#FFFF0000" />
+            android:background="#EADEB8" />
 
         <LinearLayout
             android:layout_width="match_parent"

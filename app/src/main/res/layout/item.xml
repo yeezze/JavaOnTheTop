@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="190dp"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    android:padding="8dp"
     android:background="@android:color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <!--
     * Created by 태섭 on 2021-11-09
@@ -17,6 +17,7 @@
         android:id="@+id/imageBtnMain"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginLeft="8dp"
         android:src="@drawable/icon2" />
 
     <TextView
@@ -24,11 +25,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="음식이름적어주세요"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:fontFamily="@font/imcresoojin"/>
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="가격적어주세요" />
+        android:text="가격적어주세요"
+        android:fontFamily="@font/imcresoojin"/>
 </LinearLayout>
