@@ -25,9 +25,6 @@ public class SubActivity_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_menu);
 
-        btncom = (Button) findViewById(R.id.buttoncomment);
-        edtcomment = (EditText) findViewById(R.id.edtcomment);
-
         // 뒤로가기 버튼 클릭시 종료
         backbtn = (ImageButton) findViewById(R.id.backimgbtn);
         backbtn.setOnClickListener(new View.OnClickListener() {

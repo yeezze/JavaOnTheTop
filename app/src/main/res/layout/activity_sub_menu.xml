@@ -246,20 +246,5 @@
         android:text="4. 마지막으로 약불에 1분간 볶는다."
         android:textSize="15dp" />
 
-    <EditText
-        android:id="@+id/edtcomment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        android:text="메모 입력" />
-
-    <Button
-        android:id="@+id/buttoncomment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="입력 완료" />
-
 
 </LinearLayout>
