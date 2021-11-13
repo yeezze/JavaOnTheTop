@@ -14,7 +14,7 @@
     -->
 
     <ImageButton
-        android:id="@+id/imageBtn"
+        android:id="@+id/imageBtnMain"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/icon2" />
