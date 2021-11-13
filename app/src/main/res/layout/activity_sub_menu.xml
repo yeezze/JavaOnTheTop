@@ -6,6 +6,22 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backimgbtn"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/leftarrow" />
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -23,18 +39,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="메뉴 이름"
-            android:fontFamily="@font/imcresoojin"/>
-
+            android:fontFamily="@font/imcresoojin"
+            android:text="메뉴 이름" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="가격"
-            android:fontFamily="@font/imcresoojin"/>
-
+            android:fontFamily="@font/imcresoojin"
+            android:text="가격" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -43,39 +57,194 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/lock" />
+            app:srcCompat="@drawable/fridge" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#EADEB8"
-        android:fontFamily="@font/imcresoojin"
-        android:text="메뉴 설명 한마디" />
+        android:text="메뉴 설명 한마디"
+        android:fontFamily="@font/imcresoojin"/>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_weight="1"
-        android:fontFamily="@font/imcresoojin"
-        android:text="재료🥕" />
+        android:text="재료" />
 
-    <com.google.android.youtube.player.YouTubePlayerView
-         android:id="@+id/youTubePlayerView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/youtubeBtn"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itembtn1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/greenonion" />
+
+            <TextView
+                android:id="@+id/textItem1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="대파" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itembtn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/greenonion" />
+
+            <TextView
+                android:id="@+id/textItem2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="대파" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itembtn3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/greenonion" />
+
+            <TextView
+                android:id="@+id/textItem3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="대파" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itembtn4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/greenonion" />
+
+            <TextView
+                android:id="@+id/textItem4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="대파" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itembtn5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/greenonion" />
+
+            <TextView
+                android:id="@+id/textItem5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="대파" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="#C56824"
-        android:fontFamily="@font/imcresoojin"
-        android:text="재생"
-        android:textColor="#EADEB8" />
+        android:layout_weight="1"
+        android:text="이렇게 만들어 보세요! (클릭시 영상 연결)" />
+
+<!--    <com.google.android.youtube.player.YouTubePlayerView-->
+<!--        android:id="@+id/youTubePlayerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+<!--        <Button-->
+<!--            android:id="@+id/youtubeBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="재생"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_gravity="center"/>-->
+
+    <TextView
+        android:id="@+id/textrecipe1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="1. 계란후라이를 만든다"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textrecipe2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="2. 밥을 기름에 볶는다."
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textrecipe3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="3. 간장 1스푼 넣는다."
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textrecipe4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="4. 마지막으로 약불에 1분간 볶는다."
+        android:textSize="15dp" />
 
 
 </LinearLayout>

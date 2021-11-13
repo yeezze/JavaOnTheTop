@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import java.util.Arrays;
@@ -40,6 +44,17 @@ public class MainActivity extends AppCompatActivity {
         init(); // 리사이클러 뷰
         getData(); // 리사이클러 뷰 데이터 가져오기
 
+        /*
+        이미지 버튼 클릭시 화면 전환 by 예지
+         */
+        ImageView logo = (ImageView) findViewById(R.id.logo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SubActivity_menu.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

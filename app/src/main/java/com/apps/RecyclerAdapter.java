@@ -1,5 +1,6 @@
 package com.apps;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +60,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
 
             textView1 = itemView.findViewById(R.id.text1);
             textView2 = itemView.findViewById(R.id.text2);
-            imageBtn = itemView.findViewById(R.id.imageBtn);
+            imageBtn = itemView.findViewById(R.id.imageBtnMain);
         }
 
         void onBind(Data data) {
