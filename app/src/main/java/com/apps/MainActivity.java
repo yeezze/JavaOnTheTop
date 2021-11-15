@@ -5,11 +5,15 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import java.util.Arrays;
@@ -21,14 +25,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewFlipper v_flipper;
-    private RecyclerAdapter adapter;
-    GridLayoutManager layoutManager;
+    private ViewFlipper v_flipper;
+    private Spinner spinner;
+    private ImageButton imgBtn1;
+    int result;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dropDownBox();
+        subActivityBtn();
 
         int images[] = {
                 R.drawable.sample1,
@@ -40,21 +48,6 @@ public class MainActivity extends AppCompatActivity {
         for (int image : images) {
             flipperImages(image);
         } // 변수 images 안에 있는 요소들을 대상으로 반복문 실행 #배너
-
-        init(); // 리사이클러 뷰
-        getData(); // 리사이클러 뷰 데이터 가져오기
-
-        /*
-        이미지 버튼 클릭시 화면 전환 by 예지
-         */
-        ImageView logo = (ImageView) findViewById(R.id.logo);
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity_menu.class);
-                startActivity(intent);
-            }
-        });
 
     }
 
@@ -68,43 +61,44 @@ public class MainActivity extends AppCompatActivity {
         v_flipper.setInAnimation(this, android.R.anim.slide_in_left); // 애니메이션
         v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     } // 롤링배너
+    
+    public void dropDownBox(){
+        spinner = (Spinner)findViewById(R.id.spinner);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(parent.getItemAtPosition(position).toString().equals("이름순")){
+                    Toast.makeText(getApplicationContext(),"이름순",Toast.LENGTH_SHORT).show();
+                }else if(parent.getItemAtPosition(position).toString().equals("가격순")){
+                    Toast.makeText(getApplicationContext(),"가격순",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(),"등록순",Toast.LENGTH_SHORT).show();
+                };
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    public void subActivityBtn(){
+                /*
+        이미지 버튼 클릭시 화면 전환 by 예지
+         */
+        ImageView logo = (ImageView) findViewById(R.id.imageBtnMain1);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SubActivity_menu.class);
+                startActivity(intent);
+            }
+        });
+
+    }
 
 
-    private void init() {
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
-        layoutManager = new GridLayoutManager(getApplicationContext(), 2);
-
-        adapter = new RecyclerAdapter();
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(layoutManager);
-    } // 리사이클러 뷰
-
-
-    private void getData() {
-
-        List<String> listTitle = Arrays.asList("가나다", "나다라", "다라마", "라마바", "마바사", "바사아");
-        List<String> listWorth = Arrays.asList("1000", "2000", "1000", "2000", "1000", "3000");
-        List<Integer> listResId = Arrays.asList(
-                R.drawable.sample1,
-                R.drawable.sample2,
-                R.drawable.sample3,
-                R.drawable.sample4,
-                R.drawable.sample5,
-                R.drawable.sample6
-        );
-        for (int i = 0; i < listTitle.size(); i++) {
-            // 각 List의 값들을 data 객체에 set 해줍니다.
-            Data data = new Data();
-            data.setTitle(listTitle.get(i));
-            data.setWorth(listWorth.get(i));
-            data.setResId(listResId.get(i));
-
-            // 각 값이 들어간 data를 adapter에 추가합니다.
-            adapter.addItem(data);
-        }
-
-        // adapter의 값이 변경되었다는 것을 알려줍니다.
-        adapter.notifyDataSetChanged();
-    } // 리사이클러 뷰 데이터 가져오기
 }
