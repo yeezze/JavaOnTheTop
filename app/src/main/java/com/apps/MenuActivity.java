@@ -1,20 +1,13 @@
 package com.apps;
 
 import android.annotation.SuppressLint;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -24,19 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 sqlite by 예진
  */
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ToggleButton;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.apps.R;
+import java.util.ArrayList;
 
 /*
 sqlite by 예진
@@ -44,11 +25,23 @@ sqlite by 예진
 
 public class MenuActivity extends AppCompatActivity {
     mySQLiteHelper mySQLiteHelper;
-    TextView name1, name2, name3, name4;
-    TextView cost1, cost2, cost3, cost4;
+
     ToggleButton toggleButton1, toggleButton2, toggleButton3, toggleButton4;
+    TextView name1, name2, name3, name4, cost1, cost2, cost3, cost4;
     Spinner spinner;
     SQLiteDatabase sqlDB;
+
+    int imageResource1 = R.drawable.sample1;
+    int imageResource2 = R.drawable.sample2;
+    int imageResource3 = R.drawable.sample3;
+    int imageResource4 = R.drawable.sample4;
+
+
+    String[] food_title = {"미역국", "미역국", "미역국", "미역국"};
+    int[] food_image = {imageResource1, imageResource2, imageResource3, imageResource4};
+    String[] food_cost =  {"0원", "0원", "0원", "0원"};
+    String[] food_status = {"F", "F", "F", "F"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +63,14 @@ public class MenuActivity extends AppCompatActivity {
         toggleButton3 = (ToggleButton) findViewById(R.id.toggleButton3);
         toggleButton4 = (ToggleButton) findViewById(R.id.toggleButton4);
 
-        int imageResource1 = R.drawable.sample1;
-        Drawable image1 = getResources().getDrawable(imageResource1);
-        int imageResource2 = R.drawable.sample2;
-        Drawable image2 = getResources().getDrawable(imageResource2);
-        int imageResource3 = R.drawable.sample3;
-        Drawable image3 = getResources().getDrawable(imageResource3);
-        int imageResource4 = R.drawable.sample4;
-        Drawable image4 = getResources().getDrawable(imageResource4);
+
+
+      for(int i=0; i<4; i++){
+            sqlDB = mySQLiteHelper.getWritableDatabase();
+            sqlDB.execSQL("INSERT INTO menuTable VALUES  ('+food_title[i]+','"+food_image[i]+"', '+food_cost[i]+','+food_status[i]+');");
+            sqlDB.close();
+        }
+
 
         toggleButton1.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("WrongConstant")
@@ -85,7 +78,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (toggleButton1.isChecked()) {
                     sqlDB = mySQLiteHelper.getWritableDatabase();
-                    sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name1.getText().toString() + "' , '" + cost1.getText().toString() + "', '" + image1 + "', '" + "T" + "');");
+                    //sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name1.getText().toString() + "' , '" + cost1.getText().toString() + "', '" + image1 + "', '" + "T" + "');");
                     sqlDB.close();
                     Toast.makeText(getApplicationContext(), "냉장고에 저장하였습니다.", 0).show();
                 }
@@ -98,7 +91,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (toggleButton2.isChecked()) {
                     sqlDB = mySQLiteHelper.getWritableDatabase();
-                    sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name2.getText().toString() + "' , '" + cost2.getText().toString() + "', '" + image2 + "', '" + "T" + "');");
+                   // sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name2.getText().toString() + "' , '" + cost2.getText().toString() + "', '" + image2 + "', '" + "T" + "');");
                     sqlDB.close();
                     Toast.makeText(getApplicationContext(), "냉장고에 저장하였습니다.", 0).show();
                 }
@@ -111,7 +104,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (toggleButton3.isChecked()) {
                     sqlDB = mySQLiteHelper.getWritableDatabase();
-                    sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name3.getText().toString() + "' , '" + cost3.getText().toString() + "', '" + image3 + "', '" + "T" + "');");
+                    //sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name3.getText().toString() + "' , '" + cost3.getText().toString() + "', '" + image3 + "', '" + "T" + "');");
                     sqlDB.close();
                     Toast.makeText(getApplicationContext(), "냉장고에 저장하였습니다.", 0).show();
                 }
@@ -123,12 +116,14 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (toggleButton4.isChecked()) {
                     sqlDB = mySQLiteHelper.getWritableDatabase();
-                    sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name4.getText().toString() + "' , '" + cost4.getText().toString() + "', '" + image4 + "', '" + "T" + "');");
+                    //sqlDB.execSQL("INSERT INTO menuTable VALUES ( '" + name4.getText().toString() + "' , '" + cost4.getText().toString() + "', '" + image4 + "', '" + "T" + "');");
                     sqlDB.close();
                     Toast.makeText(getApplicationContext(), "냉장고에 저장하였습니다.", 0).show();
                 }
             }
         });
+
+
     }
 
     public class mySQLiteHelper extends SQLiteOpenHelper {
@@ -158,4 +153,6 @@ public class MenuActivity extends AppCompatActivity {
             onCreate(db);
             }
         }
-    }
+
+        }
+
