@@ -62,4 +62,8 @@ public class SubActivity_menu extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coupang.com/np/search?component=&q=청양고추&channel=user"));
         startActivity(intent);
     }
+    public void onitembtn6Clicked(View v) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coupang.com/np/search?component=&q=%EC%9C%A1%EC%88%98%EC%9A%A9+%EB%A9%B8%EC%B9%98&channel=user"));
+        startActivity(intent);
+    }
 }

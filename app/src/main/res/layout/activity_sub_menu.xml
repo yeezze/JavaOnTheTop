@@ -36,11 +36,12 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="214dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/imcresoojin"
-            android:text="메뉴 이름" />
+            android:text=" 된장찌개"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -48,7 +49,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/imcresoojin"
-            android:text="가격" />
+            android:text="가격대: 만원 이하" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -63,20 +64,24 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:background="#EADEB8"
         android:fontFamily="@font/imcresoojin"
-        android:text="메뉴 설명 한마디" />
+        android:text="👨‍🍳 손쉽게 즐기는 뜨끈한 집밥의 대명사!" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="43dp"
+        android:layout_width="match_parent"
         android:layout_height="19dp"
         android:layout_weight="1"
-        android:text="재료" />
+        android:background="#EADEB8"
+        android:fontFamily="@font/imcresoojin"
+        android:text="🍴 재료" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#EADEB8">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,18 +92,21 @@
             <ImageButton
                 android:id="@+id/itembtn1"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#eadeb8"
                 android:onClick="onitembtn1Clicked"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/greenonion" />
+                app:srcCompat="@drawable/miso" />
 
             <TextView
                 android:id="@+id/textItem1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/imcresoojin"
                 android:text="된장" />
         </LinearLayout>
 
@@ -112,17 +120,20 @@
                 android:id="@+id/itembtn2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#eadeb8"
                 android:onClick="onitembtn2Clicked"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/greenonion" />
+                app:srcCompat="@drawable/garlic" />
 
             <TextView
                 android:id="@+id/textItem2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/imcresoojin"
                 android:text="간마늘" />
         </LinearLayout>
 
@@ -136,17 +147,20 @@
                 android:id="@+id/itembtn3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#eadeb8"
                 android:onClick="onitembtn3Clicked"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/greenonion" />
+                app:srcCompat="@drawable/onion" />
 
             <TextView
                 android:id="@+id/textItem3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/imcresoojin"
                 android:text="양파" />
         </LinearLayout>
 
@@ -160,17 +174,20 @@
                 android:id="@+id/itembtn4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#eadeb8"
                 android:onClick="onitembtn4Clicked"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/greenonion" />
+                app:srcCompat="@drawable/springonion" />
 
             <TextView
                 android:id="@+id/textItem4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/imcresoojin"
                 android:text="대파" />
         </LinearLayout>
 
@@ -184,18 +201,48 @@
                 android:id="@+id/itembtn5"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#eadeb8"
                 android:onClick="onitembtn5Clicked"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/greenonion" />
+                app:srcCompat="@drawable/chilipepper" />
 
             <TextView
                 android:id="@+id/textItem5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/imcresoojin"
                 android:text="청양고추" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itembtn6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#eadeb8"
+                android:onClick="onitembtn6Clicked"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/anchovy" />
+
+            <TextView
+                android:id="@+id/textItem6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/imcresoojin"
+                android:text="멸치" />
         </LinearLayout>
 
     </LinearLayout>
@@ -204,6 +251,9 @@
         android:id="@+id/btnYoutube"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="#C56824"
+        android:backgroundTint="#C56824"
+        android:fontFamily="@font/imcresoojin"
         android:onClick="onBtnYoutubeClicked"
         android:text="이렇게 만들어보세요!" />
 
@@ -212,7 +262,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
-        android:text="1. 애호박, 양파, 두부는 먹기 좋은 크기로 잘라 준비한다. (깍둑썰기)"
+        android:fontFamily="@font/imcresoojin"
+        android:text="1. (애호박), 양파, (두부)는 먹기 좋은 크기로 잘라 준비한다. (깍둑썰기)"
         android:textSize="15dp" />
 
     <TextView
@@ -220,7 +271,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
-        android:text="2. 느타리버섯은 찢어서 준비한다."
+        android:fontFamily="@font/imcresoojin"
+        android:text="2. 느타리버섯은 찢어서 준비한다. (생략가능)"
         android:textSize="15dp" />
 
     <TextView
@@ -228,7 +280,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
-        android:text="3. 청양고추, 홍고추, 대파는 1cm 정도 두께로 썰어 준비한다."
+        android:fontFamily="@font/imcresoojin"
+        android:text="3. 청양고추, (홍고추), 대파는 1cm 정도 두께로 썰어 준비한다."
         android:textSize="15dp" />
 
     <TextView
@@ -237,6 +290,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
         android:text="4. 멸치는 머리, 내장을 제거하고 3등분 정도로 찢어 준비한다."
+        android:fontFamily="@font/imcresoojin"
         android:textSize="15dp" />
 
     <TextView
@@ -245,6 +299,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
         android:text="5. 냄비에 손질한 멸치, 물, 양파를 넣어 끓인다."
+        android:fontFamily="@font/imcresoojin"
         android:textSize="15dp" />
 
     <TextView
@@ -252,7 +307,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
-        android:text="6. 육수가 끓으면 느타리버섯, 애호박, 간마늘, 된장을 넣는다."
+        android:fontFamily="@font/imcresoojin"
+        android:text="6. 육수가 끓으면 (느타리버섯), (애호박), 간마늘, 된장을 넣는다."
         android:textSize="15dp" />
 
     <TextView
@@ -260,7 +316,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
-        android:text="7. 된장 육수가 끓어오르면 대파, 청양고추, 홍고추를 넣어 끓인다."
+        android:fontFamily="@font/imcresoojin"
+        android:text="7. 된장 육수가 끓어오르면 대파, 청양고추, (홍고추)를 넣어 끓인다."
         android:textSize="15dp" />
 
     <TextView
@@ -268,8 +325,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
-        android:text="8. 찌개가 끓으면 두부를 넣고 1분 정도 끓여 완성한다."
+        android:fontFamily="@font/imcresoojin"
+        android:text="8. 찌개가 끓으면 (두부)를 넣고 1분 정도 끓여 완성한다."
         android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* ()는 생략가능"
+        android:fontFamily="@font/imcresoojin"
+        android:textSize="10dp"
+        android:layout_margin="7dp"/>
 
 
 </LinearLayout>
