@@ -3,6 +3,5 @@
     <string-array name="item">
         <item>이름순</item>
         <item>가격순</item>
-        <item>등록순</item>
     </string-array>
 </resources>

@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -16,7 +19,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -27,16 +33,20 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewFlipper v_flipper;
     private Spinner spinner;
-    private ImageButton imgBtn1;
-    int result;
+    private GridLayoutManager layoutManager;
+    private RecyclerAdapter adapter;
+    private ArrayList<Data> data, filteredData;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getData();
         dropDownBox();
-        subActivityBtn();
+        searchText();
+
 
         int images[] = {
                 R.drawable.sample1,
@@ -69,36 +79,98 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).toString().equals("이름순")){
+                    sortByTitle();
                     Toast.makeText(getApplicationContext(),"이름순",Toast.LENGTH_SHORT).show();
-                }else if(parent.getItemAtPosition(position).toString().equals("가격순")){
-                    Toast.makeText(getApplicationContext(),"가격순",Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(getApplicationContext(),"등록순",Toast.LENGTH_SHORT).show();
-                };
+                    sortByPrice();
+                    Toast.makeText(getApplicationContext(),"가격순",Toast.LENGTH_SHORT).show();
+                }
+                adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                getData();
             }
         });
     }
 
-    public void subActivityBtn(){
-                /*
-        이미지 버튼 클릭시 화면 전환 by 예지
-         */
-        ImageView logo = (ImageView) findViewById(R.id.imageBtnMain1);
-        logo.setOnClickListener(new View.OnClickListener() {
+
+    private void getData() {
+        data = new ArrayList<>();
+
+        data.add(new Data("계란두부조림", 5000,R.drawable.sample1));
+        data.add(new Data("된장찌개", 3000,R.drawable.sample1));
+        data.add(new Data("라볶이", 2000,R.drawable.sample1));
+        data.add(new Data("포테이토 치즈피자", 7000,R.drawable.sample1));
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        adapter = new RecyclerAdapter(data);
+        recyclerView.setAdapter(adapter);
+        layoutManager = new GridLayoutManager(this, 2);
+        recyclerView.setLayoutManager(layoutManager);
+
+    } // 리사이클러뷰 적용
+
+
+    void sortByPrice() {
+        Collections.sort(data, new Comparator<Data>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity_menu.class);
-                startActivity(intent);
+            public int compare(Data o1, Data o2) {
+                if (o1.getPrice() < o2.getPrice()) {
+                    return -1;
+                } else if (o1.getPrice() > o2.getPrice()) {
+                    return 1;
+                }
+                return 0;
             }
         });
+    } // 가격순
 
+    void sortByTitle() {
+        Collections.sort(data, new Comparator<Data>() {
+            @Override
+            public int compare(Data o1, Data o2) {
+                if (o1.getTitle().compareTo(o2.getTitle()) < 0 ) {
+                    return -1;
+                } else if (o1.getTitle().compareTo(o2.getTitle()) > 0 ) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+    } // 가격순
+
+    void searchText(){
+        EditText editText = findViewById(R.id.editText);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
     }
 
+    private void filter(String text) {
+        filteredData = new ArrayList<>();
 
+        for (Data data : data) {
+            if (data.getTitle().toLowerCase().contains(text.toLowerCase())) {
+                filteredData.add(data);
+            }
+        }
+
+        adapter.filterData(filteredData);
+    }
 
 }
