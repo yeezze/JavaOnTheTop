@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ResetActivity">
+
+    <TextView
+        android:id="@+id/userid_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/password_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userid_reset"
+        android:layout_marginTop="30dp"
+        android:hint="비밀번호" />
+
+    <EditText
+        android:id="@+id/password_reset2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_reset"
+        android:layout_marginTop="30dp"
+        android:hint="비밀번호 확인" />
+
+    <Button
+        android:id="@+id/btnComplete"
+        android:layout_width="336dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/password_reset2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="비밀번호 재설정 완료"
+        android:textSize="16sp" />
+
+</RelativeLayout>

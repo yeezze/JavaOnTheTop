@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 태섭 on 2021-11-09
@@ -25,6 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     public RecyclerAdapter(ArrayList<Data> listData) {
         this.listData = listData;
     }
+
 
     @NonNull
     @Override

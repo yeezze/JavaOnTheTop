@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,15 +14,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 /**
  * Created by 태섭 on 2021-11-09
@@ -38,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Data> data, filteredData;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +41,24 @@ public class MainActivity extends AppCompatActivity {
         getData();
         dropDownBox();
         searchText();
+        ImageButton imageButton1 = (ImageButton) findViewById(R.id.scrap);
+        ImageButton imageButton2 = (ImageButton) findViewById(R.id.scrap2);
+        imageButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CalenderActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         int images[] = {
@@ -71,19 +84,19 @@ public class MainActivity extends AppCompatActivity {
         v_flipper.setInAnimation(this, android.R.anim.slide_in_left); // 애니메이션
         v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     } // 롤링배너
-    
-    public void dropDownBox(){
-        spinner = (Spinner)findViewById(R.id.spinner);
+
+    public void dropDownBox() {
+        spinner = (Spinner) findViewById(R.id.spinner);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(parent.getItemAtPosition(position).toString().equals("이름순")){
+                if (parent.getItemAtPosition(position).toString().equals("이름순")) {
                     sortByTitle();
-                    Toast.makeText(getApplicationContext(),"이름순",Toast.LENGTH_SHORT).show();
-                }else{
+                    Toast.makeText(getApplicationContext(), "이름순", Toast.LENGTH_SHORT).show();
+                } else {
                     sortByPrice();
-                    Toast.makeText(getApplicationContext(),"가격순",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "가격순", Toast.LENGTH_SHORT).show();
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -99,10 +112,10 @@ public class MainActivity extends AppCompatActivity {
     private void getData() {
         data = new ArrayList<>();
 
-        data.add(new Data("계란두부조림", 5000,R.drawable.sample1));
-        data.add(new Data("된장찌개", 3000,R.drawable.sample1));
-        data.add(new Data("라볶이", 2000,R.drawable.sample1));
-        data.add(new Data("포테이토 치즈피자", 7000,R.drawable.sample1));
+        data.add(new Data("계란두부조림", 5000, R.drawable.sample1));
+        data.add(new Data("된장찌개", 3000, R.drawable.sample1));
+        data.add(new Data("라볶이", 2000, R.drawable.sample1));
+        data.add(new Data("포테이토 치즈피자", 7000, R.drawable.sample1));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         adapter = new RecyclerAdapter(data);
@@ -131,9 +144,9 @@ public class MainActivity extends AppCompatActivity {
         Collections.sort(data, new Comparator<Data>() {
             @Override
             public int compare(Data o1, Data o2) {
-                if (o1.getTitle().compareTo(o2.getTitle()) < 0 ) {
+                if (o1.getTitle().compareTo(o2.getTitle()) < 0) {
                     return -1;
-                } else if (o1.getTitle().compareTo(o2.getTitle()) > 0 ) {
+                } else if (o1.getTitle().compareTo(o2.getTitle()) > 0) {
                     return 1;
                 }
                 return 0;
@@ -141,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         });
     } // 가격순
 
-    void searchText(){
+    void searchText() {
         EditText editText = findViewById(R.id.editText);
         editText.addTextChangedListener(new TextWatcher() {
             @Override

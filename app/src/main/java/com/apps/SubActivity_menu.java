@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 
 public class SubActivity_menu extends AppCompatActivity {
 
-    ImageButton backbtn;
+    ImageButton backbtn, imageButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,12 +30,21 @@ public class SubActivity_menu extends AppCompatActivity {
 
         // 뒤로가기 버튼 클릭시 종료
         backbtn = (ImageButton) findViewById(R.id.backimgbtn);
+        imageButton = (ImageButton) findViewById(R.id.imageButton);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CalenderActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void onBtnYoutubeClicked(View v) {
