@@ -12,12 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="아이디"
+        android:fontFamily="@font/imcresoojin"
         android:layout_marginTop="60dp"/>
     <EditText
         android:id="@+id/password2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호"
+        android:fontFamily="@font/imcresoojin"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/userid2"/>
 
@@ -29,6 +31,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
         android:text="로그인"
+        android:fontFamily="@font/imcresoojin"
         android:textSize="16sp" />
 
     <Button
@@ -38,8 +41,10 @@
         android:layout_below="@+id/signin2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
+        android:backgroundTint="#A09F57"
+        android:fontFamily="@font/imcresoojin"
         android:text="계정 생성하러가기"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/forgot"
@@ -50,6 +55,7 @@
         android:layout_marginTop="31dp"
         android:gravity="center"
         android:text="비밀번호 찾기"
+        android:fontFamily="@font/imcresoojin"
         android:textSize="16sp"/>
 
 

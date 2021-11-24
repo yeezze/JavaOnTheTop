@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="아이디를 입력해주세요."
+        android:fontFamily="@font/imcresoojin"
         android:textSize="20dp"
         android:layout_marginTop="50dp"/>
 
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/imcresoojin"
         android:hint="아이디" />
 
     <Button
@@ -30,7 +32,9 @@
         android:layout_below="@+id/editText1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/imcresoojin"
         android:text="비밀번호 재설정"
+        android:textColor="@color/white"
         android:textSize="16sp" />
 
 </RelativeLayout>

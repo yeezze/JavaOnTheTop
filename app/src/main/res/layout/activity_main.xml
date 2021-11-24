@@ -84,17 +84,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center|left"
                     android:background="@drawable/round_background"
                     android:backgroundTint="#EADEB8"
                     android:fontFamily="@font/imcresoojin"
-                    android:text="든든한 한끼가 당신을 기다리고 있어요♫" />
+                    android:text="👨‍🍳 든든한 한끼가 당신을 기다리고 있어요 👩‍🍳" />
 
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    android:entries="@array/item" />
+                    android:entries="@array/item"
+                    />
                     </LinearLayout>
 
             <View

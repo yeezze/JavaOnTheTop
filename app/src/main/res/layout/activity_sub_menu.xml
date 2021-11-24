@@ -41,6 +41,9 @@
             android:layout_weight="1"
             android:fontFamily="@font/imcresoojin"
             android:text=" 된장찌개"
+            android:gravity="center|left"
+
+
             android:textSize="30dp" />
 
         <TextView
@@ -49,7 +52,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/imcresoojin"
-            android:text="가격대: 만원 이하" />
+            android:text="가격대: 만원 이하"
+            android:gravity="center"/>
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -67,7 +71,8 @@
         android:layout_height="30dp"
         android:background="#EADEB8"
         android:fontFamily="@font/imcresoojin"
-        android:text="👨‍🍳 손쉽게 즐기는 뜨끈한 집밥의 대명사!" />
+        android:gravity="center|left"
+        android:text="👨‍🍳 손쉽게 즐기는 뜨끈한 집밥의 대명사! 👩‍🍳" />
 
     <TextView
         android:id="@+id/textView4"
