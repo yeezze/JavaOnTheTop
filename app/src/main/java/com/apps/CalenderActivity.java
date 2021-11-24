@@ -1,12 +1,12 @@
 package com.apps;
 
 import android.annotation.SuppressLint;
-import android.icu.util.Output;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,6 +30,7 @@ public class CalenderActivity extends AppCompatActivity {
     private Button save_btn, change_btn, delete_btn;
     private TextView Date, Outputb, Outputl, Outputd;
     private EditText Break, Lunch, Dinner;
+    private ImageView imageView2, imageView3;
     private static final String TAG = "CalendarActivity";
     private CalendarView mCalendarView;
     @Override
@@ -50,10 +51,16 @@ public class CalenderActivity extends AppCompatActivity {
         delete_btn = (Button) findViewById(R.id.delete_btn);
         change_btn = (Button) findViewById(R.id.change_btn);
 
+        imageView2 = (ImageView) findViewById(R.id.imageView2);
+        imageView3 = (ImageView) findViewById(R.id.imageView3);
+
+
 
         mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                imageView2.setVisibility(View.VISIBLE);
+                imageView3.setVisibility(View.VISIBLE);
                 Date.setVisibility(View.VISIBLE);
                 save_btn.setVisibility(View.VISIBLE);
                 Break.setVisibility(View.VISIBLE);
@@ -68,7 +75,7 @@ public class CalenderActivity extends AppCompatActivity {
                 Break.setText("");
                 Lunch.setText("");
                 Dinner.setText("");
-                checkDay(year, month, dayOfMonth);
+                cal_check(year, month, dayOfMonth);
             }
         });
 
@@ -103,21 +110,21 @@ public class CalenderActivity extends AppCompatActivity {
         });
     }
 
-    public void  checkDay(int cYear,int cMonth,int cDay){
+    public void cal_check(int year, int month, int dayOfMonth){
         //파일 이름 설정
-        name1="Java_on_top_project_breakfast" + cYear + "-" + (cMonth+1) + "" + "-" + cDay + ".txt";
-        name2="Java_on_top_project_lunch" + cYear + "-" + (cMonth+1) + "" + "-" + cDay + ".txt";
-        name3="Java_on_top_project_dinner" + cYear + "-" + (cMonth+1) + "" + "-" + cDay + ".txt";
-        FileInputStream File = null;//FileStream File 변수 선언
+        name1="Java_on_top_project_breakfast" + year + "-" + (month+1) + "" + "-" + dayOfMonth + ".txt";
+        name2="Java_on_top_project_lunch" + year + "-" + (month+1) + "" + "-" + dayOfMonth + ".txt";
+        name3="Java_on_top_project_dinner" + year + "-" + (month+1) + "" + "-" + dayOfMonth + ".txt";
+        FileInputStream File_in = null; //FileStream File 변수 선언
 
         try{
-            File = openFileInput(name1);
-            File = openFileInput(name2);
-            File = openFileInput(name3);
+            File_in = openFileInput(name1);
+            File_in = openFileInput(name2);
+            File_in = openFileInput(name3);
 
-            byte[] fileData = new byte [File.available()];
-            File.read(fileData);
-            File.close();
+            byte[] fileData = new byte [File_in.available()];
+            File_in.read(fileData);
+            File_in.close();
 
             str1 = new String(fileData);
             str2 = new String(fileData);
