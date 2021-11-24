@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by 태섭 on 2021-11-09
@@ -22,6 +21,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
 
     // adapter에 들어갈 list 입니다.
     ArrayList<Data> listData;
+    private Intent intent;
 
     public RecyclerAdapter(ArrayList<Data> listData) {
         this.listData = listData;
@@ -72,7 +72,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
             super(itemView);
 
             textView1 = itemView.findViewById(R.id.name);
-            textView2 = itemView.findViewById(R.id.price);
+            textView2 = itemView.findViewById(R.id.price2);
 
             imageBtn = itemView.findViewById(R.id.imageBtn);
             imageBtn.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
                 public void onClick(View v) {
                     int pos = getAdapterPosition();
                     if (pos != RecyclerView.NO_POSITION){
-                        Intent intent = new Intent(v.getContext(), SubActivity_menu.class);
+                        intent = new Intent(v.getContext(), SubActivity_menu.class);
+                        intent.putExtra("viewNum",listData.get(pos).getViewNum());
+                        intent.putExtra("title",listData.get(pos).getTitle());
+                        intent.putExtra("price",listData.get(pos).getPrice());
+                        intent.putExtra("resId",listData.get(pos).getResId());
                         v.getContext().startActivity(intent);
                         Toast.makeText(v.getContext(), "클릭 되었습니다.", Toast.LENGTH_SHORT).show();
                     }

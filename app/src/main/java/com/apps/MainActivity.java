@@ -112,10 +112,10 @@ public class MainActivity extends AppCompatActivity {
     private void getData() {
         data = new ArrayList<>();
 
-        data.add(new Data("계란두부조림", 5000, R.drawable.sample1));
-        data.add(new Data("된장찌개", 3000, R.drawable.sample1));
-        data.add(new Data("라볶이", 2000, R.drawable.sample1));
-        data.add(new Data("포테이토 치즈피자", 7000, R.drawable.sample1));
+        data.add(new Data("계란두부조림", 5000, R.drawable.menu1, 1));
+        data.add(new Data("된장찌개", 3000, R.drawable.menu2, 2));
+        data.add(new Data("라볶이", 2000, R.drawable.menu3, 3));
+        data.add(new Data("포테이토 치즈피자", 7000, R.drawable.menu4, 4));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         adapter = new RecyclerAdapter(data);

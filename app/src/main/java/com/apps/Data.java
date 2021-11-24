@@ -5,27 +5,17 @@ package com.apps;
  */
 
 public class Data{
-    public Data(String title, int price, int resId) {
+    public Data(String title, int price, int resId, int viewNum) {
         this.title = title;
         this.price = price;
         this.resId = resId;
+        this.viewNum = viewNum;
     }
 
     private String title;
     private int price;
     private int resId;
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setPrice(int cost) {
-        this.price = cost;
-    }
-
-    public void setResId(int resId) {
-        this.resId = resId;
-    }
+    private int viewNum;
 
     public String getTitle() {
         return title;
@@ -38,5 +28,7 @@ public class Data{
     public int getResId() {
         return resId;
     }
+
+    public int getViewNum() { return viewNum; }
 
 }

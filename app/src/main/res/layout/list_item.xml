@@ -23,7 +23,7 @@
             android:textSize="14sp"/>
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/subImg"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="#4CAF50" />

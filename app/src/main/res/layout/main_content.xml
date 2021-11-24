@@ -29,7 +29,7 @@
         android:fontFamily="@font/imcresoojin"/>
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/price2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="가격적어주세요"
