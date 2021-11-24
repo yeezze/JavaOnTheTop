@@ -23,12 +23,13 @@
             android:layout_height="match_parent"
             android:src="@drawable/sample3"/>
     </ViewFlipper>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:background="@drawable/round_background"
-        android:text="매일 매일 새로운 음식"
         android:fontFamily="@font/imcresoojin"
-        />
+        android:gravity="center"
+        android:text="매일 매일 새로운 음식" />
 </LinearLayout>
