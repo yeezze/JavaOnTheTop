@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:padding="10dp"
     tools:context=".LoginActivity">
 
@@ -11,22 +12,27 @@
         android:id="@+id/userid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:hint="아이디"
-        android:layout_marginTop="60dp"/>
+        android:fontFamily="@font/imcresoojin"/>
+
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="비밀번호"
+        android:layout_below="@+id/userid"
         android:layout_marginTop="60dp"
-        android:layout_below="@+id/userid"/>
+        android:hint="비밀번호"
+        android:fontFamily="@font/imcresoojin"/>
+
     <EditText
         android:id="@+id/findpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="비밀번호 확인"
+        android:layout_below="@+id/password"
         android:layout_marginTop="60dp"
-        android:layout_below="@+id/password"/>
+        android:hint="비밀번호 확인"
+        android:fontFamily="@font/imcresoojin"/>
 
     <Button
         android:id="@+id/btnsignup"
@@ -35,6 +41,8 @@
         android:layout_below="@+id/findpassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
+        android:backgroundTint="#A09F57"
+        android:fontFamily="@font/imcresoojin"
         android:text="가입 완료"
         android:textSize="16sp" />
 

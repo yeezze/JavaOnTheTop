@@ -24,14 +24,19 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/imcresoojin"
+
         android:text="음식이름적어주세요"
-        android:textSize="20dp"
-        android:fontFamily="@font/imcresoojin"/>
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/price2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="가격적어주세요"
-        android:fontFamily="@font/imcresoojin"/>
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/imcresoojin"
+        android:text="가격적어주세요" />
 </LinearLayout>

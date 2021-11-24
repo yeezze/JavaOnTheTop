@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/userid_reset"
         android:layout_marginTop="30dp"
-        android:hint="비밀번호" />
+        android:hint="비밀번호"
+        android:fontFamily="@font/imcresoojin"/>
 
     <EditText
         android:id="@+id/password_reset2"
@@ -28,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password_reset"
         android:layout_marginTop="30dp"
-        android:hint="비밀번호 확인" />
+        android:hint="비밀번호 확인"
+        android:fontFamily="@font/imcresoojin"/>
 
     <Button
         android:id="@+id/btnComplete"
@@ -37,6 +39,8 @@
         android:layout_below="@+id/password_reset2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
+        android:backgroundTint="#A09F57"
+        android:fontFamily="@font/imcresoojin"
         android:text="비밀번호 재설정 완료"
         android:textSize="16sp" />
 
