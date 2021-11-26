@@ -96,7 +96,9 @@
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:entries="@array/item"
-                    />
+                    android:fontFamily="@font/imcresoojin"/>
+
+
                     </LinearLayout>
 
             <View

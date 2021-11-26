@@ -88,7 +88,7 @@ public class SubActivity_menu extends AppCompatActivity {
                 imageView.setImageResource(resId);
                 title2.setText(title);
                 price2.setText(price);
-                subTitle.setText("밥 한 그릇 뚝딱, 밥반찬으로 딱");
+                subTitle.setText(" 밥 한 그릇 뚝딱, 밥반찬으로 딱");
                 textRecipe.setText("1. 두부 한 모를 먹기 좋은 크기로 썰어준 후 키친타월로 물기를 제거해 준다.\n");
                 textRecipe.append("\n2. 후라이팬에 식용유 한 스푼 정도 두르고 중불로 맞추어 두부를 구워준다.\n");
                 textRecipe.append("\n3. 두부를 팬 가장자리에 놓은 후 양파를 먹을 만큼 썰어서 중앙에 굽는다.\n");
@@ -113,7 +113,7 @@ public class SubActivity_menu extends AppCompatActivity {
                 imageView.setImageResource(resId);
                 title2.setText(title);
                 price2.setText(price);
-                subTitle.setText("즐기는 뜨끈한 집밥의 대명사!");
+                subTitle.setText(" 손쉽게 즐기는 뜨끈한 집밥의 대명사!");
                 textRecipe.setText("1. (애호박), 양파, (두부)는 먹기 좋은 크기로 잘라 준비한다. (깍둑썰기)\n");
                 textRecipe.append("\n2. 느타리버섯은 찢어서 준비한다. (생략가능)\n");
                 textRecipe.append("\n3. 청양고추, (홍고추), 대파는 1cm 정도 두께로 썰어 준비한다.\n");
@@ -139,7 +139,7 @@ public class SubActivity_menu extends AppCompatActivity {
                 imageView.setImageResource(resId);
                 title2.setText(title);
                 price2.setText(price);
-                subTitle.setText("즐기는 뜨끈한 집밥의 대명사!");
+                subTitle.setText(" 매일 먹는 라면, 색다르게 먹는 방법 없을까?");
                 textRecipe.setText("1. 대파는 송송 썰어 준비한다. \n");
                 textRecipe.append("\n2. 냄비에 물, 분말수프(1/2~2/3), 건더기수프, 설탕, 고추장을 넣고 풀어주며 끓인다. (분말수프의 양은 기호에 맞게 조절한다.)\n");
                 textRecipe.append("\n3. 육수가 끓으면 면을 넣고 끓인다.\n");
@@ -160,7 +160,7 @@ public class SubActivity_menu extends AppCompatActivity {
                 imageView.setImageResource(resId);
                 title2.setText(title);
                 price2.setText(price);
-                subTitle.setText("즐기는 뜨끈한 집밥의 대명사!");
+                subTitle.setText(" 본 조르노! 집에서 즐기는 이탈리아");
                 textRecipe.setText("1. 감자는 얇게 채 썰고 베이컨은 먹기 좋은 크기로 썰어준다.\n");
                 textRecipe.append("\n2. 달군 프라이팬에 오일을 두르고 생새우, 후추를 넣고 약불에 볶는다\n");
                 textRecipe.append("\n3. 새우를 건지고 베이컨을 넣어 볶아준다.\n");

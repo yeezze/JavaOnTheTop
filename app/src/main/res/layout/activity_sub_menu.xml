@@ -40,8 +40,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/imcresoojin"
-            android:text=" 된장찌개"
             android:gravity="center|left"
+            android:text="  된장찌개"
 
 
             android:textSize="30dp" />
@@ -72,7 +72,7 @@
         android:background="#EADEB8"
         android:fontFamily="@font/imcresoojin"
         android:gravity="center|left"
-        android:text="👨‍🍳 손쉽게 즐기는 뜨끈한 집밥의 대명사! 👩‍🍳" />
+        android:text=" 👨‍🍳 손쉽게 즐기는 뜨끈한 집밥의 대명사! 👩‍🍳" />
 
     <TextView
         android:id="@+id/textView4"
