@@ -21,7 +21,7 @@
             android:id="@id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/sample3"/>
+            android:src="@drawable/bannermenu"/>
     </ViewFlipper>
 
     <TextView
@@ -31,5 +31,5 @@
         android:background="@drawable/round_background"
         android:fontFamily="@font/imcresoojin"
         android:gravity="center"
-        android:text="매일 매일 새로운 음식" />
+        android:text=" 매일 매일 새로운 음식!" />
 </LinearLayout>
