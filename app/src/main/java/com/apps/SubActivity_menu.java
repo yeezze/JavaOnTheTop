@@ -125,7 +125,7 @@ public class SubActivity_menu extends AppCompatActivity {
                 btnYoutube.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        BtnClicked("https://youtu.be/6e-IbuuD6ZU");
+                        BtnClicked("https://youtu.be/ffuakdFmuh4");
                     }
                 });
                 itemBtnSetting(itemBtn1, textItem1, R.drawable.doenjang, "된장", "https://coupa.ng/caIRU6");
@@ -148,7 +148,7 @@ public class SubActivity_menu extends AppCompatActivity {
                 btnYoutube.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        BtnClicked("https://youtu.be/ffuakdFmuh4");
+                        BtnClicked("https://youtu.be/6e-IbuuD6ZU");
                     }
                 });
                 itemBtnSetting(itemBtn1, textItem1, R.drawable.ramen, "라면", "https://coupa.ng/caISPd");
