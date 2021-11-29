@@ -26,7 +26,9 @@
         android:id="@+id/subImg"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        app:srcCompat="@drawable/sample1" />
+        app:srcCompat="@drawable/sample1"
+        android:scaleType="centerCrop"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
