@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
         int images[] = {
                 R.drawable.bannermenu,
-                R.drawable.menu4,
-                R.drawable.menu2
+                R.drawable.bannermenu4,
+                R.drawable.bannermenu2
         };
 
         v_flipper = findViewById(R.id.image_slide);
